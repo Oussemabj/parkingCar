@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --verbose"
+    "test": "cucumber-js --format summary"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",

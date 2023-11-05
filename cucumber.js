@@ -1,4 +1,3 @@
-// cucumber.js
 module.exports = {
-    default: `--format-options '{"snippetInterface": "synchronous"}' features/`
+    default: `--format-options '{"snippetInterface":"synchronous"}' --require 'step_definitions/**/*.js' --require 'features/**/*.feature'`
 };

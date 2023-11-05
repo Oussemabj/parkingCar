@@ -5,18 +5,18 @@ Feature: Park a vehicle
   I should be able to indicate my vehicle location
 
   Background:
-    Given my fleet
-    And a vehicle
+    Given I have my fleet
+    And I have a vehicle
     And I have registered this vehicle into my fleet
 
   @critical
   Scenario: Successfully park a vehicle
-    And a location
+    Given I have a location
     When I park my vehicle at this location
     Then the known location of my vehicle should verify this location
 
-  Scenario: Can't localize my vehicle to the same location two times in a row
-    And a location
-    And my vehicle has been parked into this location
-    When I try to park my vehicle at this location
+  Scenario: Can't localize my vehicle to the same location twice consecutively
+    Given I have a location
+    And my vehicle has been parked at this location
+    When I try to park my vehicle at the same location
     Then I should be informed that my vehicle is already parked at this location
